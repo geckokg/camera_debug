@@ -146,5 +146,14 @@ project_1/*.bit
 
 
 
+# === FORCE TRACK EVERYTHING under project_1 ===
+!project_1/
+!project_1/**
 
 
+# allow HDL sources
+!*.v
+!*.sv
+!*.vh
+!*.vhd
+!*.xdc
