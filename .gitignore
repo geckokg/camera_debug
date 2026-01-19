@@ -105,3 +105,46 @@ vitis_rx/
 # 取消忽略 import 目录
 !ddr4_0_ex/import/
 !ddr4_0_ex/import/**
+
+
+
+
+
+
+#########
+# Vivado project: track sources / ignore outputs
+#########
+
+# 放行工程入口
+!project_1/*.xpr
+!project_1/*.tcl
+
+# 放行 sources/constraints（源码、约束、BD、IP 定义通常都在这里）
+!project_1/project_1.srcs/**
+!project_1/project_1.srcs/**/**.xdc
+!project_1/project_1.srcs/**/**.xci
+!project_1/project_1.srcs/**/**.bd
+!project_1/project_1.srcs/**/**.tcl
+
+# 明确忽略 Vivado 生成目录（避免误提交巨大垃圾）
+project_1/project_1.cache/
+project_1/project_1.gen/
+project_1/project_1.runs/
+project_1/project_1.hw/
+project_1/project_1.sim/
+project_1/project_1.ip_user_files/
+
+# 通常不提交的产物（很大/可再生）
+project_1/*.xsa
+project_1/*.bit
+*.log
+*.jou
+*.dmp
+*.wdf
+*.wpc
+
+
+
+
+
+
